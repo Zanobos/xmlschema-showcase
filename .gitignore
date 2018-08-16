@@ -1,4 +1,6 @@
 nbproject/
 target/
 build/
-
+bin/
+gen-src/
+generated/
