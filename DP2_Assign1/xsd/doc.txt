@@ -1,0 +1,5 @@
+My guidelines for the schema creation had been:
+-using as much as possible keys and keyrefs, in order to be sure to have correct data with existing references in my application
+-using as much as possible the extension and the groups, in order to not duplicate declarations and definitions in the XSD
+-use the enumeration constraint to be sure to have only known functionality
+-use of the unique element to not duplicate data, such as for the functionalities inside a policy

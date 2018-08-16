@@ -1,0 +1,4 @@
+The design choices of the DTD are to recreate the data of the interfaces with the tag available in DTD.
+Each entity of the application is mapped on one element. The attributes of the entities are used when I needed to 
+constraint the choice of a property/field, such as when I needed to refer to existing entities or when some choices were boolean.
+The multiplicity of the entities are constraint by the usual modifier *

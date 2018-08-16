@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="NFFG-3" default="all" basedir=".">
+    
+	<!-- Server properties -->
+	<property name="schema.dir" location="${lab3.location}/xsd" />
+	<property name="package" value="it.polito.dp2.NFFG.sol3" />
+	<property name="binding.file" value="${schema.dir}/binding.xjb" />
+	
+	<!-- The classpath to be used for compilation of the solution -->
+	<path id="sol.classpath">
+		 <fileset dir="${lib.dir}"/>
+	</path>
+	
+	<!-- build the service -->
+	<target name="build-service" depends="generate-bindings, generate-neo4j-artifacts"
+		description="Generate all the artifacts and build the server">
+		<echo>Building the service</echo>
+		<javac 	destdir="${build.dir}" 		debug="${debug}"
+				debuglevel="${debuglevel}" 	source="${source}"
+				target="${target}"			includeantruntime="false">
+				<src path="${sol3.dir}/service"/>
+				<classpath>
+					<path refid="sol.classpath" />
+				</classpath>
+		</javac>
+		<echo>Done.</echo>
+	</target>
+	
+	<!-- generate-bindings -->
+	<target name="generate-bindings" description="Generate bindings from schema">
+		<!-- Generate the code -->
+		<xjc destdir="${src.dir}" extension="true" package="${package}.service.entities" removeOldOutput="yes">
+			<binding  dir="${schema.dir}">
+				<include name="**/*.xjb"/>
+			</binding>
+			<schema dir="${basedir}">
+				<include name="**/*.xsd"/>
+			</schema>
+			<depends dir="${schema.dir}" includes="*.xjb" />
+			<produces dir="${sol3.dir}/service/entities" includes="*.java" />
+			<!-- Plugins -->
+			<classpath>
+				<path refid="sol.classpath" />			
+			</classpath>
+		</xjc>
+	</target>
+	
+	<!-- generate the artifacts to neo4j -->
+    <target name="generate-neo4j-artifacts">
+        <wjc description="${NEO4JURL}/application.wadl" package="${package}.service.neo4j"
+                     autoSchemaPackage="false" target="${src.dir}">
+			<produces dir="${sol3.dir}/service/neo4j" includes="*.java"/>
+        </wjc>
+    </target>
+		
+	<!-- Define the xjc task -->
+	<taskdef name="xjc" classname="com.sun.tools.xjc.XJCTask">
+		<!-- XJC2 Task classpath -->
+		<classpath>
+			<path refid="sol.classpath" />
+		</classpath>
+    </taskdef>
+	
+	<!-- Define the wjc task -->
+	<taskdef name="wjc"  classname="org.jvnet.ws.wadl2java.WJCTask">
+        <classpath>
+            <path refid="sol.classpath" />
+        </classpath>
+    </taskdef>
+   
+	<!-- Client tasks -->
+
+	<!-- generate the artifacts to the server -->
+    <target name="generate-client-artifacts">
+		<echo>Generating the artifacts for ${client.name}</echo>
+        <wjc description="${URL}/application.wadl" package="${package}.${client.name}.entities"
+                     autoSchemaPackage="false" target="${src.dir}">
+			<produces dir="${sol3.dir}/${client.name}/entities" includes="*.java"/>
+        </wjc>
+    </target>
+	
+	<!-- build multiple clients -->
+	<target name="build-client">
+		<antcall target="build-single-client">
+			<param name="client.name" value="client1"/>
+		</antcall>
+		<antcall target="build-single-client">
+			<param name="client.name" value="client2"/>
+		</antcall>
+	</target>
+	
+	<!-- build a single client -->
+	<target name="build-single-client" depends="generate-client-artifacts"
+		description="Generate all the artifacts and build the client">
+		<echo>Building ${client.name}</echo>
+		<javac destdir="${build.dir}"	debug="${debug}"
+			debuglevel="${debuglevel}"	source="${source}"
+			target="${target}"			includeantruntime="false">
+				<src path="${sol3.dir}/${client.name}" />
+				<classpath>
+					<path refid="sol.classpath" />
+				</classpath>
+		</javac>
+		<echo>Done.</echo>
+	</target>
+
+</project>

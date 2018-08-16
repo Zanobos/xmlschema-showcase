@@ -1,0 +1,204 @@
+<?xml version="1.0"?>
+
+<xsd:schema version="1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified">
+
+    <!-- Root of the application -->
+    <xsd:element name="NffgVerifier" type="NffgVerifierType">
+        
+        <!-- Elements are unique and keys -->
+        <xsd:key name="key_nffg"> 
+            <xsd:selector xpath="./Nffgs/Nffg"/>
+            <xsd:field xpath="@name"/>
+        </xsd:key>
+        <xsd:key name="key_policy"> 
+            <xsd:selector xpath="./Policies/Policy"/>
+            <xsd:field xpath="@name"/>
+        </xsd:key>
+        
+        <!-- References to the previous key -->
+        <!-- Reference from Policy to Nffg -->
+        <xsd:keyref name="keyref_nffg" refer="key_nffg">
+            <xsd:selector xpath="./Policies/Policy/Nffg"/>
+            <xsd:field xpath="./Nffgs"/>
+        </xsd:keyref> 
+        <!-- Reference from VerificationResult to Policy -->
+        <xsd:keyref name="keyref_policy" refer="key_policy">
+            <xsd:selector xpath="./Policies/Policy/Result/Policy"/>
+            <xsd:field xpath="./Policies"/>
+        </xsd:keyref> 
+    </xsd:element>
+    
+    <!-- Base of the application-->
+    <xsd:complexType name="NffgVerifierType">
+        <xsd:sequence>
+            <xsd:element name="Nffgs" type="NffgsType" minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="Policies" type="PoliciesType" minOccurs="0" maxOccurs="1"/>
+        </xsd:sequence>
+    </xsd:complexType>
+        
+    <!-- Sequence of nffgs -->
+    <xsd:complexType name="NffgsType">
+        <xsd:sequence>
+            <xsd:element name="Nffg" type="NffgType" minOccurs="0" maxOccurs="unbounded">
+                <!-- uniqueness -->
+                <xsd:key name="key_node">
+                    <xsd:selector xpath="./Node"/>
+                    <xsd:field xpath="@name"/>
+                </xsd:key>
+                <xsd:key name="key_link">
+                    <xsd:selector xpath="./Link"/>
+                    <xsd:field xpath="@name"/>
+                </xsd:key>
+                <!-- Reference from Node to Link -->
+                <xsd:keyref name="keyref_link" refer="key_link">
+                    <xsd:selector xpath="./Node/Link"/>
+                    <xsd:field xpath="."/>
+                </xsd:keyref>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <!-- Sequence of policies -->
+    <xsd:complexType name="PoliciesType">
+        <xsd:sequence>
+            <xsd:element name="Policy" type="PolicyType" minOccurs="0" maxOccurs="unbounded">
+                <!-- uniqueness -->
+                <xsd:unique name="unique_functionality">
+                    <xsd:selector xpath="./Functionality"/>
+                    <xsd:field xpath="@func"/>
+                </xsd:unique>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <!-- Every object extends this type-->
+    <xsd:complexType name="NamedEntityType">
+        <xsd:attribute name="name" type="xsd:string" use="required"/>
+    </xsd:complexType>
+    
+    <!-- NffgType -->
+    <xsd:complexType name="NffgType">
+        <xsd:complexContent>
+            <xsd:extension base="NamedEntityType">
+                <xsd:sequence>
+                    <xsd:element name="UpdateTime" type="xsd:dateTime" maxOccurs="1"/>
+                    <xsd:element name="Node" type="NodeType" maxOccurs="unbounded" minOccurs="0">
+                        <!-- uniqueness -->
+                        <xsd:unique name="unique_link">
+                            <xsd:selector xpath="./Link"/>
+                            <xsd:field xpath="."/>
+                        </xsd:unique>
+                    </xsd:element>
+                    <xsd:element name="Link" type="LinkType" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
+    <!-- NodeType -->
+    <xsd:complexType name="NodeType">
+        <xsd:complexContent>
+            <xsd:extension base="NamedEntityType">
+                <xsd:sequence>
+                    <xsd:element name="Functionality" type="FuncType" maxOccurs="1"/>
+                    <xsd:element name="Link" type="xsd:string" maxOccurs="unbounded" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
+    <!-- LinkType -->
+    <xsd:complexType name="LinkType">
+        <xsd:complexContent>
+            <xsd:extension base="NamedEntityType">
+                <xsd:group ref="srcAndDest"></xsd:group>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
+    <!-- Base policy -->
+    <xsd:complexType name="PolicyType">
+        <xsd:complexContent>
+            <xsd:extension base="NamedEntityType">
+                <xsd:sequence>
+                    <xsd:element name="Nffg" type="xsd:string" maxOccurs="1"/>
+                    <xsd:element name="Result" type="VerificationResultType" maxOccurs="1" minOccurs="0"/>
+                </xsd:sequence>
+                <xsd:attribute name="positive" type="xsd:boolean" use="required"/>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
+    <!-- Policy of type reachability -->
+    <xsd:complexType name="ReachibilityPolicyType">
+        <xsd:complexContent>
+            <xsd:extension base="PolicyType">
+                <xsd:group ref="srcAndDest"></xsd:group>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
+    <!-- Policy of type traversability -->
+    <xsd:complexType name="TraversalPolicyType">
+        <xsd:complexContent>
+            <xsd:extension base="ReachibilityPolicyType">
+                <xsd:sequence>
+                    <xsd:element name="Functionality" type="FuncType" maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
+    <!-- Verification Result Type -->
+    <xsd:complexType name="VerificationResultType" >
+        <xsd:sequence>
+            <xsd:element name="VerificationResult" type="xsd:boolean" maxOccurs="1" minOccurs="0"/>
+            <xsd:element name="VerificationResultMsg" type="xsd:string" maxOccurs="1" minOccurs="0"/>
+            <xsd:element name="VerificationTime" type="xsd:dateTime" maxOccurs="1" minOccurs="0"/>
+        </xsd:sequence>
+        <xsd:attribute name="policy" type="xsd:string" use="required"/>
+    </xsd:complexType>
+
+    <!-- A group in order to use it later -->
+    <xsd:group name="srcAndDest">
+        <xsd:sequence>
+            <xsd:element name="SourceNode" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+            <xsd:element name="DestinationNode" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+        </xsd:sequence>
+    </xsd:group>
+    
+    <!-- Functional type -->
+    <xsd:complexType name="FuncType">
+        <xsd:attribute name="func" use="required">
+            <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                    <xsd:enumeration value="CACHE"/>
+                    <xsd:enumeration value="DPI"/>
+                    <xsd:enumeration value="FW"/>
+                    <xsd:enumeration value="MAIL_CLIENT"/>
+                    <xsd:enumeration value="MAIL_SERVER"/>
+                    <xsd:enumeration value="NAT"/>
+                    <xsd:enumeration value="SPAM"/>
+                    <xsd:enumeration value="VPN"/>
+                    <xsd:enumeration value="WEB_CLIENT"/>
+                    <xsd:enumeration value="WEB_SERVER"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+        </xsd:attribute>
+    </xsd:complexType>
+    
+    <!-- Type to reference nffgs and policies by id -->
+    <xsd:complexType name="ReferenceByIDType" >
+        <xsd:sequence>
+            <xsd:element name="ReferenceID" type="xsd:string" maxOccurs="unbounded" minOccurs="1"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="VerificationResultsType" >
+        <xsd:sequence>
+            <xsd:element name="VerificationResult" type="VerificationResultType" maxOccurs="unbounded" minOccurs="1"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+</xsd:schema>

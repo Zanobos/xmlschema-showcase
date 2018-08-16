@@ -1,0 +1,13 @@
+REQUEST
+
+GET http://localhost:9008/NffgService/rest/nffgVerifier/policies/Policy56
+
+RESPONSE Status 200 OK
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TraversalPolicy positive="false" name="Policy56">
+    <Nffg>Nffg1</Nffg>
+    <SourceNode>MAILSERVER1</SourceNode>
+    <DestinationNode>MAILCLIENT5</DestinationNode>
+    <Functionality func="MAIL_CLIENT"/>
+</TraversalPolicy>

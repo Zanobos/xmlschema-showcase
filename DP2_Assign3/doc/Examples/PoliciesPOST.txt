@@ -1,0 +1,95 @@
+REQUEST
+
+POST http://localhost:9008/NffgService/rest/nffgVerifier/policies
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Policies xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Policy xsi:type="ReachibilityPolicyType" positive="false" name="Policy135">
+		<Nffg>Nffg3</Nffg>
+		<SourceNode>MAILSERVER1</SourceNode>
+		<DestinationNode>MAILCLIENT6</DestinationNode>
+	</Policy>
+	<Policy xsi:type="ReachibilityPolicyType" positive="true" name="Policy134">
+		<Nffg>Nffg3</Nffg>
+		<SourceNode>WEBSERVER2</SourceNode>
+		<DestinationNode>MAILCLIENT2</DestinationNode>
+	</Policy>
+	<Policy xsi:type="ReachibilityPolicyType" positive="false" name="Policy137">
+		<Nffg>Nffg3</Nffg>
+		<SourceNode>MAILSERVER1</SourceNode>
+		<DestinationNode>WEBCLIENT1</DestinationNode>
+	</Policy>
+	<Policy xsi:type="ReachibilityPolicyType" positive="true" name="Policy136">
+		<Nffg>Nffg3</Nffg>
+		<SourceNode>MAILSERVER1</SourceNode>
+		<DestinationNode>MAILCLIENT0</DestinationNode>
+	</Policy>
+	<Policy xsi:type="TraversalPolicyType" positive="false" name="Policy131">
+		<Nffg>Nffg3</Nffg>
+		<SourceNode>MAILCLIENT6</SourceNode>
+		<DestinationNode>MAILSERVER1</DestinationNode>
+		<Functionality func="NAT"/>
+		<Functionality func="WEB_SERVER"/>
+		<Functionality func="FW"/>
+	</Policy>
+	<Policy xsi:type="TraversalPolicyType" positive="false" name="Policy130">
+		<Nffg>Nffg3</Nffg>
+		<Result>
+			<VerificationResult>false</VerificationResult>
+			<VerificationResultMsg>Policy verification result not true</VerificationResultMsg>
+			<VerificationTime>2016-09-27T06:50:20.000+02:00</VerificationTime>
+		</Result>
+		<SourceNode>MAILCLIENT6</SourceNode>
+		<DestinationNode>MAILSERVER1</DestinationNode>
+		<Functionality func="MAIL_SERVER"/>
+		<Functionality func="WEB_CLIENT"/>
+	</Policy>
+	<Policy xsi:type="ReachibilityPolicyType" positive="true" name="Policy133">
+		<Nffg>Nffg3</Nffg>
+		<SourceNode>MAILSERVER0</SourceNode>
+		<DestinationNode>MAILCLIENT0</DestinationNode>
+	</Policy>
+	<Policy xsi:type="TraversalPolicyType" positive="false" name="Policy132">
+		<Nffg>Nffg3</Nffg>
+		<Result>
+			<VerificationResult>true</VerificationResult>
+			<VerificationResultMsg>Policy verificarion result true</VerificationResultMsg>
+			<VerificationTime>2016-09-27T04:47:20.000+02:00</VerificationTime>
+		</Result>
+		<SourceNode>MAILSERVER1</SourceNode>
+		<DestinationNode>MAILCLIENT6</DestinationNode>
+		<Functionality func="MAIL_SERVER"/>
+		<Functionality func="WEB_CLIENT"/>
+	</Policy>
+	<Policy xsi:type="ReachibilityPolicyType" positive="false" name="Policy128">
+		<Nffg>Nffg3</Nffg>
+		<SourceNode>MAILCLIENT2</SourceNode>
+		<DestinationNode>WEBSERVER2</DestinationNode>
+	</Policy>
+	<Policy xsi:type="ReachibilityPolicyType" positive="true" name="Policy127">
+		<Nffg>Nffg3</Nffg>
+		<Result>
+			<VerificationResult>false</VerificationResult>
+			<VerificationResultMsg>Policy verification result not true</VerificationResultMsg>
+			<VerificationTime>2016-09-27T06:23:20.000+02:00</VerificationTime>
+		</Result>
+		<SourceNode>MAILCLIENT2</SourceNode>
+		<DestinationNode>MAILSERVER0</DestinationNode>
+	</Policy>
+</Policies>
+
+RESPONSE Status 200 OK
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ReferenceByID>
+    <ReferenceID>Policy135</ReferenceID>
+    <ReferenceID>Policy134</ReferenceID>
+    <ReferenceID>Policy137</ReferenceID>
+    <ReferenceID>Policy136</ReferenceID>
+    <ReferenceID>Policy131</ReferenceID>
+    <ReferenceID>Policy130</ReferenceID>
+    <ReferenceID>Policy133</ReferenceID>
+    <ReferenceID>Policy132</ReferenceID>
+    <ReferenceID>Policy128</ReferenceID>
+    <ReferenceID>Policy127</ReferenceID>
+</ReferenceByID>

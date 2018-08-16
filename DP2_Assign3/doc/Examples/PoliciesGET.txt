@@ -1,0 +1,1236 @@
+REQUEST
+
+GET http://localhost:9008/NffgService/rest/nffgVerifier/policies
+
+RESPONSE Status 200 OK
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Policies>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="false" name="Policy56">
+        <Nffg>Nffg1</Nffg>
+        <SourceNode>MAILSERVER1</SourceNode>
+        <DestinationNode>MAILCLIENT5</DestinationNode>
+        <Functionality func="MAIL_CLIENT"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="false" name="Policy55">
+        <Nffg>Nffg1</Nffg>
+        <SourceNode>MAILSERVER2</SourceNode>
+        <DestinationNode>WEBCLIENT6</DestinationNode>
+        <Functionality func="WEB_CLIENT"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="false" name="Policy54">
+        <Nffg>Nffg1</Nffg>
+        <Result>
+            <VerificationResult>false</VerificationResult>
+            <VerificationResultMsg>Policy verification result not true</VerificationResultMsg>
+            <VerificationTime>2016-09-27T03:37:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>MAILSERVER2</SourceNode>
+        <DestinationNode>WEBCLIENT6</DestinationNode>
+        <Functionality func="SPAM"/>
+        <Functionality func="FW"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="false" name="Policy53">
+        <Nffg>Nffg1</Nffg>
+        <Result>
+            <VerificationResult>false</VerificationResult>
+            <VerificationResultMsg>Policy verification result not true</VerificationResultMsg>
+            <VerificationTime>2016-09-27T07:12:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>MAILSERVER2</SourceNode>
+        <DestinationNode>MAILCLIENT4</DestinationNode>
+        <Functionality func="WEB_CLIENT"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="true" name="Policy59">
+        <Nffg>Nffg2</Nffg>
+        <Result>
+            <VerificationResult>false</VerificationResult>
+            <VerificationResultMsg>Policy verification result not true</VerificationResultMsg>
+            <VerificationTime>2016-09-26T07:05:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>MAILCLIENT2</SourceNode>
+        <DestinationNode>WEBSERVER2</DestinationNode>
+        <Functionality func="SPAM"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="true" name="Policy58">
+        <Nffg>Nffg2</Nffg>
+        <Result>
+            <VerificationResult>false</VerificationResult>
+            <VerificationResultMsg>Policy verification result not true</VerificationResultMsg>
+            <VerificationTime>2016-09-26T06:59:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>WEBCLIENT0</SourceNode>
+        <DestinationNode>MAILSERVER1</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="true" name="Policy57">
+        <Nffg>Nffg2</Nffg>
+        <SourceNode>WEBCLIENT0</SourceNode>
+        <DestinationNode>MAILSERVER0</DestinationNode>
+        <Functionality func="NAT"/>
+        <Functionality func="VPN"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="false" name="Policy52">
+        <Nffg>Nffg1</Nffg>
+        <Result>
+            <VerificationResult>true</VerificationResult>
+            <VerificationResultMsg>Policy verificarion result true</VerificationResultMsg>
+            <VerificationTime>2016-09-26T19:44:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>MAILSERVER0</SourceNode>
+        <DestinationNode>MAILCLIENT7</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="false" name="Policy146">
+        <Nffg>Nffg5</Nffg>
+        <Result>
+            <VerificationResult>false</VerificationResult>
+            <VerificationResultMsg>Policy verification result not true</VerificationResultMsg>
+            <VerificationTime>2016-09-25T10:53:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>WEBSERVER7</SourceNode>
+        <DestinationNode>WEBCLIENT1</DestinationNode>
+        <Functionality func="DPI"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="false" name="Policy51">
+        <Nffg>Nffg1</Nffg>
+        <SourceNode>MAILSERVER3</SourceNode>
+        <DestinationNode>MAILCLIENT0</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="true" name="Policy145">
+        <Nffg>Nffg5</Nffg>
+        <Result>
+            <VerificationResult>false</VerificationResult>
+            <VerificationResultMsg>Policy verification result not true</VerificationResultMsg>
+            <VerificationTime>2016-09-25T19:04:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>WEBSERVER2</SourceNode>
+        <DestinationNode>MAILCLIENT2</DestinationNode>
+        <Functionality func="VPN"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="true" name="Policy50">
+        <Nffg>Nffg1</Nffg>
+        <Result>
+            <VerificationResult>true</VerificationResult>
+            <VerificationResultMsg>Policy verificarion result true</VerificationResultMsg>
+            <VerificationTime>2016-09-27T00:44:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>MAILSERVER1</SourceNode>
+        <DestinationNode>MAILCLIENT1</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="false" name="Policy147">
+        <Nffg>Nffg5</Nffg>
+        <SourceNode>MAILSERVER8</SourceNode>
+        <DestinationNode>WEBCLIENT1</DestinationNode>
+        <Functionality func="MAIL_CLIENT"/>
+        <Functionality func="SPAM"/>
+        <Functionality func="VPN"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="false" name="Policy45">
+        <Nffg>Nffg1</Nffg>
+        <Result>
+            <VerificationResult>true</VerificationResult>
+            <VerificationResultMsg>Policy verificarion result true</VerificationResultMsg>
+            <VerificationTime>2016-09-27T06:10:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>MAILSERVER2</SourceNode>
+        <DestinationNode>MAILCLIENT9</DestinationNode>
+        <Functionality func="WEB_CLIENT"/>
+        <Functionality func="MAIL_CLIENT"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="true" name="Policy142">
+        <Nffg>Nffg5</Nffg>
+        <SourceNode>WEBSERVER2</SourceNode>
+        <DestinationNode>MAILCLIENT0</DestinationNode>
+        <Functionality func="MAIL_SERVER"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="false" name="Policy44">
+        <Nffg>Nffg1</Nffg>
+        <Result>
+            <VerificationResult>true</VerificationResult>
+            <VerificationResultMsg>Policy verificarion result true</VerificationResultMsg>
+            <VerificationTime>2016-09-26T21:30:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>MAILSERVER2</SourceNode>
+        <DestinationNode>WEBCLIENT8</DestinationNode>
+        <Functionality func="DPI"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="true" name="Policy141">
+        <Nffg>Nffg5</Nffg>
+        <SourceNode>WEBSERVER2</SourceNode>
+        <DestinationNode>WEBCLIENT1</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="false" name="Policy43">
+        <Nffg>Nffg1</Nffg>
+        <SourceNode>MAILSERVER2</SourceNode>
+        <DestinationNode>WEBCLIENT8</DestinationNode>
+        <Functionality func="WEB_SERVER"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="false" name="Policy144">
+        <Nffg>Nffg5</Nffg>
+        <Result>
+            <VerificationResult>true</VerificationResult>
+            <VerificationResultMsg>Policy verificarion result true</VerificationResultMsg>
+            <VerificationTime>2016-09-25T20:18:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>WEBSERVER4</SourceNode>
+        <DestinationNode>MAILCLIENT2</DestinationNode>
+        <Functionality func="SPAM"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="true" name="Policy42">
+        <Nffg>Nffg1</Nffg>
+        <Result>
+            <VerificationResult>true</VerificationResult>
+            <VerificationResultMsg>Policy verificarion result true</VerificationResultMsg>
+            <VerificationTime>2016-09-27T07:52:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>MAILSERVER3</SourceNode>
+        <DestinationNode>WEBCLIENT2</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="false" name="Policy143">
+        <Nffg>Nffg5</Nffg>
+        <Result>
+            <VerificationResult>false</VerificationResult>
+            <VerificationResultMsg>Policy verification result not true</VerificationResultMsg>
+            <VerificationTime>2016-09-26T01:59:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>WEBSERVER5</SourceNode>
+        <DestinationNode>MAILCLIENT2</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="true" name="Policy49">
+        <Nffg>Nffg1</Nffg>
+        <SourceNode>MAILSERVER2</SourceNode>
+        <DestinationNode>WEBCLIENT3</DestinationNode>
+        <Functionality func="SPAM"/>
+        <Functionality func="CACHE"/>
+        <Functionality func="NAT"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="false" name="Policy48">
+        <Nffg>Nffg1</Nffg>
+        <SourceNode>MAILSERVER2</SourceNode>
+        <DestinationNode>MAILCLIENT4</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="true" name="Policy47">
+        <Nffg>Nffg1</Nffg>
+        <Result>
+            <VerificationResult>false</VerificationResult>
+            <VerificationResultMsg>Policy verification result not true</VerificationResultMsg>
+            <VerificationTime>2016-09-27T03:51:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>WEBSERVER4</SourceNode>
+        <DestinationNode>MAILCLIENT9</DestinationNode>
+        <Functionality func="VPN"/>
+        <Functionality func="NAT"/>
+        <Functionality func="MAIL_CLIENT"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="false" name="Policy140">
+        <Nffg>Nffg5</Nffg>
+        <SourceNode>MAILCLIENT2</SourceNode>
+        <DestinationNode>WEBSERVER5</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="true" name="Policy46">
+        <Nffg>Nffg1</Nffg>
+        <Result>
+            <VerificationResult>true</VerificationResult>
+            <VerificationResultMsg>Policy verificarion result true</VerificationResultMsg>
+            <VerificationTime>2016-09-26T18:08:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>MAILSERVER0</SourceNode>
+        <DestinationNode>WEBCLIENT2</DestinationNode>
+        <Functionality func="MAIL_SERVER"/>
+        <Functionality func="NAT"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="true" name="Policy139">
+        <Nffg>Nffg5</Nffg>
+        <SourceNode>MAILCLIENT2</SourceNode>
+        <DestinationNode>WEBSERVER4</DestinationNode>
+        <Functionality func="SPAM"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="true" name="Policy138">
+        <Nffg>Nffg5</Nffg>
+        <SourceNode>MAILCLIENT2</SourceNode>
+        <DestinationNode>WEBSERVER2</DestinationNode>
+        <Functionality func="VPN"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="true" name="Policy41">
+        <Nffg>Nffg1</Nffg>
+        <SourceNode>MAILSERVER3</SourceNode>
+        <DestinationNode>WEBCLIENT2</DestinationNode>
+        <Functionality func="NAT"/>
+        <Functionality func="VPN"/>
+        <Functionality func="WEB_CLIENT"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="true" name="Policy135">
+        <Nffg>Nffg5</Nffg>
+        <SourceNode>WEBCLIENT1</SourceNode>
+        <DestinationNode>WEBSERVER7</DestinationNode>
+        <Functionality func="DPI"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="false" name="Policy40">
+        <Nffg>Nffg1</Nffg>
+        <SourceNode>MAILSERVER2</SourceNode>
+        <DestinationNode>WEBCLIENT8</DestinationNode>
+        <Functionality func="FW"/>
+        <Functionality func="WEB_CLIENT"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="true" name="Policy134">
+        <Nffg>Nffg5</Nffg>
+        <SourceNode>WEBCLIENT1</SourceNode>
+        <DestinationNode>MAILSERVER8</DestinationNode>
+        <Functionality func="MAIL_CLIENT"/>
+        <Functionality func="SPAM"/>
+        <Functionality func="VPN"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="false" name="Policy137">
+        <Nffg>Nffg5</Nffg>
+        <Result>
+            <VerificationResult>true</VerificationResult>
+            <VerificationResultMsg>Policy verificarion result true</VerificationResultMsg>
+            <VerificationTime>2016-09-26T00:46:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>MAILCLIENT2</SourceNode>
+        <DestinationNode>WEBSERVER2</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="true" name="Policy136">
+        <Nffg>Nffg5</Nffg>
+        <SourceNode>MAILCLIENT2</SourceNode>
+        <DestinationNode>WEBSERVER7</DestinationNode>
+        <Functionality func="FW"/>
+        <Functionality func="MAIL_SERVER"/>
+        <Functionality func="SPAM"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="true" name="Policy34">
+        <Nffg>Nffg1</Nffg>
+        <Result>
+            <VerificationResult>false</VerificationResult>
+            <VerificationResultMsg>Policy verification result not true</VerificationResultMsg>
+            <VerificationTime>2016-09-27T02:45:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>WEBCLIENT8</SourceNode>
+        <DestinationNode>MAILSERVER2</DestinationNode>
+        <Functionality func="FW"/>
+        <Functionality func="WEB_CLIENT"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="true" name="Policy131">
+        <Nffg>Nffg5</Nffg>
+        <SourceNode>MAILCLIENT0</SourceNode>
+        <DestinationNode>WEBSERVER5</DestinationNode>
+        <Functionality func="DPI"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="true" name="Policy33">
+        <Nffg>Nffg1</Nffg>
+        <Result>
+            <VerificationResult>true</VerificationResult>
+            <VerificationResultMsg>Policy verificarion result true</VerificationResultMsg>
+            <VerificationTime>2016-09-27T03:22:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>WEBCLIENT8</SourceNode>
+        <DestinationNode>MAILSERVER1</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="true" name="Policy130">
+        <Nffg>Nffg5</Nffg>
+        <Result>
+            <VerificationResult>true</VerificationResult>
+            <VerificationResultMsg>Policy verificarion result true</VerificationResultMsg>
+            <VerificationTime>2016-09-26T02:00:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>MAILCLIENT0</SourceNode>
+        <DestinationNode>WEBSERVER7</DestinationNode>
+        <Functionality func="MAIL_CLIENT"/>
+        <Functionality func="VPN"/>
+        <Functionality func="NAT"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="false" name="Policy32">
+        <Nffg>Nffg1</Nffg>
+        <Result>
+            <VerificationResult>false</VerificationResult>
+            <VerificationResultMsg>Policy verification result not true</VerificationResultMsg>
+            <VerificationTime>2016-09-27T08:07:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>WEBCLIENT8</SourceNode>
+        <DestinationNode>MAILSERVER2</DestinationNode>
+        <Functionality func="WEB_SERVER"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="false" name="Policy133">
+        <Nffg>Nffg5</Nffg>
+        <SourceNode>WEBCLIENT1</SourceNode>
+        <DestinationNode>WEBSERVER2</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="false" name="Policy31">
+        <Nffg>Nffg1</Nffg>
+        <Result>
+            <VerificationResult>true</VerificationResult>
+            <VerificationResultMsg>Policy verificarion result true</VerificationResultMsg>
+            <VerificationTime>2016-09-27T04:24:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>WEBCLIENT8</SourceNode>
+        <DestinationNode>MAILSERVER2</DestinationNode>
+        <Functionality func="DPI"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="true" name="Policy132">
+        <Nffg>Nffg5</Nffg>
+        <Result>
+            <VerificationResult>true</VerificationResult>
+            <VerificationResultMsg>Policy verificarion result true</VerificationResultMsg>
+            <VerificationTime>2016-09-25T21:26:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>MAILCLIENT0</SourceNode>
+        <DestinationNode>WEBSERVER2</DestinationNode>
+        <Functionality func="MAIL_SERVER"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="true" name="Policy38">
+        <Nffg>Nffg1</Nffg>
+        <SourceNode>MAILCLIENT9</SourceNode>
+        <DestinationNode>MAILSERVER3</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="false" name="Policy37">
+        <Nffg>Nffg1</Nffg>
+        <SourceNode>MAILCLIENT9</SourceNode>
+        <DestinationNode>MAILSERVER2</DestinationNode>
+        <Functionality func="WEB_CLIENT"/>
+        <Functionality func="MAIL_CLIENT"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="false" name="Policy36">
+        <Nffg>Nffg1</Nffg>
+        <SourceNode>MAILCLIENT9</SourceNode>
+        <DestinationNode>WEBSERVER4</DestinationNode>
+        <Functionality func="VPN"/>
+        <Functionality func="NAT"/>
+        <Functionality func="MAIL_CLIENT"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="false" name="Policy35">
+        <Nffg>Nffg1</Nffg>
+        <SourceNode>WEBCLIENT8</SourceNode>
+        <DestinationNode>MAILSERVER1</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="true" name="Policy39">
+        <Nffg>Nffg1</Nffg>
+        <SourceNode>MAILSERVER3</SourceNode>
+        <DestinationNode>WEBCLIENT2</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="false" name="Policy9">
+        <Nffg>Nffg1</Nffg>
+        <Result>
+            <VerificationResult>false</VerificationResult>
+            <VerificationResultMsg>Policy verification result not true</VerificationResultMsg>
+            <VerificationTime>2016-09-26T17:56:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>MAILCLIENT1</SourceNode>
+        <DestinationNode>MAILSERVER1</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="true" name="Policy128">
+        <Nffg>Nffg4</Nffg>
+        <SourceNode>MAILSERVER2</SourceNode>
+        <DestinationNode>WEBCLIENT7</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="true" name="Policy8">
+        <Nffg>Nffg1</Nffg>
+        <SourceNode>MAILCLIENT1</SourceNode>
+        <DestinationNode>MAILSERVER3</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="false" name="Policy127">
+        <Nffg>Nffg4</Nffg>
+        <SourceNode>MAILSERVER2</SourceNode>
+        <DestinationNode>WEBCLIENT7</DestinationNode>
+        <Functionality func="DPI"/>
+        <Functionality func="CACHE"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="false" name="Policy7">
+        <Nffg>Nffg1</Nffg>
+        <SourceNode>MAILCLIENT0</SourceNode>
+        <DestinationNode>MAILSERVER3</DestinationNode>
+        <Functionality func="WEB_SERVER"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="false" name="Policy6">
+        <Nffg>Nffg1</Nffg>
+        <Result>
+            <VerificationResult>false</VerificationResult>
+            <VerificationResultMsg>Policy verification result not true</VerificationResultMsg>
+            <VerificationTime>2016-09-27T03:24:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>MAILCLIENT0</SourceNode>
+        <DestinationNode>MAILSERVER3</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="false" name="Policy129">
+        <Nffg>Nffg5</Nffg>
+        <SourceNode>MAILCLIENT0</SourceNode>
+        <DestinationNode>MAILSERVER9</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="false" name="Policy5">
+        <Nffg>Nffg1</Nffg>
+        <SourceNode>MAILCLIENT0</SourceNode>
+        <DestinationNode>MAILSERVER1</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="true" name="Policy30">
+        <Nffg>Nffg1</Nffg>
+        <SourceNode>MAILCLIENT7</SourceNode>
+        <DestinationNode>MAILSERVER0</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="false" name="Policy124">
+        <Nffg>Nffg4</Nffg>
+        <Result>
+            <VerificationResult>true</VerificationResult>
+            <VerificationResultMsg>Policy verificarion result true</VerificationResultMsg>
+            <VerificationTime>2016-09-27T13:59:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>MAILSERVER6</SourceNode>
+        <DestinationNode>MAILCLIENT0</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="false" name="Policy4">
+        <Nffg>Nffg0</Nffg>
+        <Result>
+            <VerificationResult>false</VerificationResult>
+            <VerificationResultMsg>Policy verification result not true</VerificationResultMsg>
+            <VerificationTime>2016-09-28T08:17:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>WEBSERVER0</SourceNode>
+        <DestinationNode>MAILCLIENT0</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="true" name="Policy123">
+        <Nffg>Nffg4</Nffg>
+        <SourceNode>MAILSERVER6</SourceNode>
+        <DestinationNode>WEBCLIENT2</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="true" name="Policy3">
+        <Nffg>Nffg0</Nffg>
+        <Result>
+            <VerificationResult>false</VerificationResult>
+            <VerificationResultMsg>Policy verification result not true</VerificationResultMsg>
+            <VerificationTime>2016-09-28T15:26:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>MAILSERVER1</SourceNode>
+        <DestinationNode>MAILCLIENT2</DestinationNode>
+        <Functionality func="MAIL_CLIENT"/>
+        <Functionality func="FW"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="false" name="Policy126">
+        <Nffg>Nffg4</Nffg>
+        <SourceNode>WEBSERVER3</SourceNode>
+        <DestinationNode>MAILCLIENT5</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="false" name="Policy2">
+        <Nffg>Nffg0</Nffg>
+        <SourceNode>WEBCLIENT3</SourceNode>
+        <DestinationNode>WEBSERVER0</DestinationNode>
+        <Functionality func="CACHE"/>
+        <Functionality func="DPI"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="false" name="Policy125">
+        <Nffg>Nffg4</Nffg>
+        <SourceNode>WEBSERVER1</SourceNode>
+        <DestinationNode>WEBCLIENT3</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="false" name="Policy1">
+        <Nffg>Nffg0</Nffg>
+        <Result>
+            <VerificationResult>false</VerificationResult>
+            <VerificationResultMsg>Policy verification result not true</VerificationResultMsg>
+            <VerificationTime>2016-09-28T05:32:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>MAILCLIENT2</SourceNode>
+        <DestinationNode>MAILSERVER1</DestinationNode>
+        <Functionality func="MAIL_CLIENT"/>
+        <Functionality func="FW"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="false" name="Policy23">
+        <Nffg>Nffg1</Nffg>
+        <SourceNode>MAILCLIENT5</SourceNode>
+        <DestinationNode>MAILSERVER0</DestinationNode>
+        <Functionality func="NAT"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="true" name="Policy120">
+        <Nffg>Nffg4</Nffg>
+        <Result>
+            <VerificationResult>false</VerificationResult>
+            <VerificationResultMsg>Policy verification result not true</VerificationResultMsg>
+            <VerificationTime>2016-09-26T23:25:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>WEBSERVER3</SourceNode>
+        <DestinationNode>MAILCLIENT0</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="true" name="Policy0">
+        <Nffg>Nffg0</Nffg>
+        <Result policy="Policy0">
+            <VerificationResult>true</VerificationResult>
+            <VerificationResultMsg>Policy verification result true</VerificationResultMsg>
+            <VerificationTime>2017-01-14T11:22:52.008+01:00</VerificationTime>
+        </Result>
+        <SourceNode>MAILCLIENT0</SourceNode>
+        <DestinationNode>WEBSERVER0</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="false" name="Policy22">
+        <Nffg>Nffg1</Nffg>
+        <Result>
+            <VerificationResult>false</VerificationResult>
+            <VerificationResultMsg>Policy verification result not true</VerificationResultMsg>
+            <VerificationTime>2016-09-26T22:01:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>MAILCLIENT5</SourceNode>
+        <DestinationNode>MAILSERVER2</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="true" name="Policy21">
+        <Nffg>Nffg1</Nffg>
+        <SourceNode>MAILCLIENT5</SourceNode>
+        <DestinationNode>MAILSERVER3</DestinationNode>
+        <Functionality func="MAIL_SERVER"/>
+        <Functionality func="NAT"/>
+        <Functionality func="SPAM"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="false" name="Policy122">
+        <Nffg>Nffg4</Nffg>
+        <Result>
+            <VerificationResult>false</VerificationResult>
+            <VerificationResultMsg>Policy verification result not true</VerificationResultMsg>
+            <VerificationTime>2016-09-27T01:08:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>WEBSERVER1</SourceNode>
+        <DestinationNode>WEBCLIENT4</DestinationNode>
+        <Functionality func="MAIL_CLIENT"/>
+        <Functionality func="WEB_CLIENT"/>
+        <Functionality func="FW"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="false" name="Policy20">
+        <Nffg>Nffg1</Nffg>
+        <SourceNode>MAILCLIENT4</SourceNode>
+        <DestinationNode>MAILSERVER2</DestinationNode>
+        <Functionality func="WEB_CLIENT"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="false" name="Policy121">
+        <Nffg>Nffg4</Nffg>
+        <SourceNode>WEBSERVER1</SourceNode>
+        <DestinationNode>WEBCLIENT4</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="false" name="Policy27">
+        <Nffg>Nffg1</Nffg>
+        <SourceNode>WEBCLIENT6</SourceNode>
+        <DestinationNode>MAILSERVER2</DestinationNode>
+        <Functionality func="SPAM"/>
+        <Functionality func="FW"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="true" name="Policy26">
+        <Nffg>Nffg1</Nffg>
+        <SourceNode>WEBCLIENT6</SourceNode>
+        <DestinationNode>MAILSERVER1</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="false" name="Policy25">
+        <Nffg>Nffg1</Nffg>
+        <SourceNode>WEBCLIENT6</SourceNode>
+        <DestinationNode>MAILSERVER2</DestinationNode>
+        <Functionality func="WEB_CLIENT"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="true" name="Policy24">
+        <Nffg>Nffg1</Nffg>
+        <SourceNode>MAILCLIENT5</SourceNode>
+        <DestinationNode>MAILSERVER1</DestinationNode>
+        <Functionality func="MAIL_CLIENT"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="true" name="Policy29">
+        <Nffg>Nffg1</Nffg>
+        <SourceNode>WEBCLIENT6</SourceNode>
+        <DestinationNode>MAILSERVER1</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="false" name="Policy28">
+        <Nffg>Nffg1</Nffg>
+        <Result>
+            <VerificationResult>true</VerificationResult>
+            <VerificationResultMsg>Policy verificarion result true</VerificationResultMsg>
+            <VerificationTime>2016-09-27T06:08:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>WEBCLIENT6</SourceNode>
+        <DestinationNode>MAILSERVER2</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="true" name="Policy117">
+        <Nffg>Nffg4</Nffg>
+        <Result>
+            <VerificationResult>false</VerificationResult>
+            <VerificationResultMsg>Policy verification result not true</VerificationResultMsg>
+            <VerificationTime>2016-09-27T08:07:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>MAILSERVER8</SourceNode>
+        <DestinationNode>MAILCLIENT5</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="false" name="Policy116">
+        <Nffg>Nffg4</Nffg>
+        <SourceNode>WEBSERVER1</SourceNode>
+        <DestinationNode>MAILCLIENT5</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="true" name="Policy119">
+        <Nffg>Nffg4</Nffg>
+        <SourceNode>WEBSERVER3</SourceNode>
+        <DestinationNode>WEBCLIENT4</DestinationNode>
+        <Functionality func="CACHE"/>
+        <Functionality func="DPI"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="false" name="Policy118">
+        <Nffg>Nffg4</Nffg>
+        <Result>
+            <VerificationResult>true</VerificationResult>
+            <VerificationResultMsg>Policy verificarion result true</VerificationResultMsg>
+            <VerificationTime>2016-09-26T20:18:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>MAILSERVER9</SourceNode>
+        <DestinationNode>MAILCLIENT1</DestinationNode>
+        <Functionality func="FW"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="true" name="Policy113">
+        <Nffg>Nffg4</Nffg>
+        <SourceNode>MAILCLIENT5</SourceNode>
+        <DestinationNode>MAILSERVER0</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="false" name="Policy112">
+        <Nffg>Nffg4</Nffg>
+        <Result>
+            <VerificationResult>true</VerificationResult>
+            <VerificationResultMsg>Policy verificarion result true</VerificationResultMsg>
+            <VerificationTime>2016-09-26T19:47:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>MAILCLIENT5</SourceNode>
+        <DestinationNode>WEBSERVER3</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="false" name="Policy115">
+        <Nffg>Nffg4</Nffg>
+        <SourceNode>WEBCLIENT7</SourceNode>
+        <DestinationNode>MAILSERVER2</DestinationNode>
+        <Functionality func="DPI"/>
+        <Functionality func="CACHE"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="true" name="Policy114">
+        <Nffg>Nffg4</Nffg>
+        <SourceNode>WEBCLIENT7</SourceNode>
+        <DestinationNode>MAILSERVER2</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="false" name="Policy12">
+        <Nffg>Nffg1</Nffg>
+        <SourceNode>WEBCLIENT2</SourceNode>
+        <DestinationNode>MAILSERVER3</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="false" name="Policy11">
+        <Nffg>Nffg1</Nffg>
+        <Result>
+            <VerificationResult>false</VerificationResult>
+            <VerificationResultMsg>Policy verification result not true</VerificationResultMsg>
+            <VerificationTime>2016-09-27T04:09:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>WEBCLIENT2</SourceNode>
+        <DestinationNode>MAILSERVER3</DestinationNode>
+        <Functionality func="NAT"/>
+        <Functionality func="VPN"/>
+        <Functionality func="WEB_CLIENT"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="true" name="Policy99">
+        <Nffg>Nffg4</Nffg>
+        <Result>
+            <VerificationResult>false</VerificationResult>
+            <VerificationResultMsg>Policy verification result not true</VerificationResultMsg>
+            <VerificationTime>2016-09-27T10:15:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>WEBCLIENT3</SourceNode>
+        <DestinationNode>MAILSERVER8</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="false" name="Policy10">
+        <Nffg>Nffg1</Nffg>
+        <Result>
+            <VerificationResult>true</VerificationResult>
+            <VerificationResultMsg>Policy verificarion result true</VerificationResultMsg>
+            <VerificationTime>2016-09-27T02:56:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>WEBCLIENT2</SourceNode>
+        <DestinationNode>MAILSERVER3</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="true" name="Policy98">
+        <Nffg>Nffg4</Nffg>
+        <Result>
+            <VerificationResult>true</VerificationResult>
+            <VerificationResultMsg>Policy verificarion result true</VerificationResultMsg>
+            <VerificationTime>2016-09-27T01:22:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>WEBCLIENT3</SourceNode>
+        <DestinationNode>WEBSERVER1</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="true" name="Policy111">
+        <Nffg>Nffg4</Nffg>
+        <Result>
+            <VerificationResult>true</VerificationResult>
+            <VerificationResultMsg>Policy verificarion result true</VerificationResultMsg>
+            <VerificationTime>2016-09-27T12:21:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>MAILCLIENT5</SourceNode>
+        <DestinationNode>WEBSERVER3</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="true" name="Policy97">
+        <Nffg>Nffg4</Nffg>
+        <Result>
+            <VerificationResult>true</VerificationResult>
+            <VerificationResultMsg>Policy verificarion result true</VerificationResultMsg>
+            <VerificationTime>2016-09-27T04:01:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>WEBCLIENT2</SourceNode>
+        <DestinationNode>WEBSERVER1</DestinationNode>
+        <Functionality func="SPAM"/>
+        <Functionality func="MAIL_SERVER"/>
+        <Functionality func="NAT"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="false" name="Policy110">
+        <Nffg>Nffg4</Nffg>
+        <Result>
+            <VerificationResult>true</VerificationResult>
+            <VerificationResultMsg>Policy verificarion result true</VerificationResultMsg>
+            <VerificationTime>2016-09-27T10:30:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>MAILCLIENT5</SourceNode>
+        <DestinationNode>WEBSERVER1</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="false" name="Policy16">
+        <Nffg>Nffg1</Nffg>
+        <SourceNode>WEBCLIENT3</SourceNode>
+        <DestinationNode>MAILSERVER3</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="true" name="Policy15">
+        <Nffg>Nffg1</Nffg>
+        <SourceNode>WEBCLIENT3</SourceNode>
+        <DestinationNode>MAILSERVER2</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="true" name="Policy14">
+        <Nffg>Nffg1</Nffg>
+        <Result>
+            <VerificationResult>true</VerificationResult>
+            <VerificationResultMsg>Policy verificarion result true</VerificationResultMsg>
+            <VerificationTime>2016-09-26T20:23:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>WEBCLIENT2</SourceNode>
+        <DestinationNode>MAILSERVER0</DestinationNode>
+        <Functionality func="MAIL_SERVER"/>
+        <Functionality func="NAT"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="false" name="Policy13">
+        <Nffg>Nffg1</Nffg>
+        <SourceNode>WEBCLIENT2</SourceNode>
+        <DestinationNode>MAILSERVER2</DestinationNode>
+        <Functionality func="VPN"/>
+        <Functionality func="MAIL_SERVER"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="false" name="Policy19">
+        <Nffg>Nffg1</Nffg>
+        <Result>
+            <VerificationResult>true</VerificationResult>
+            <VerificationResultMsg>Policy verificarion result true</VerificationResultMsg>
+            <VerificationTime>2016-09-26T18:09:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>MAILCLIENT4</SourceNode>
+        <DestinationNode>MAILSERVER0</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="false" name="Policy18">
+        <Nffg>Nffg1</Nffg>
+        <SourceNode>MAILCLIENT4</SourceNode>
+        <DestinationNode>MAILSERVER2</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="true" name="Policy17">
+        <Nffg>Nffg1</Nffg>
+        <Result>
+            <VerificationResult>true</VerificationResult>
+            <VerificationResultMsg>Policy verificarion result true</VerificationResultMsg>
+            <VerificationTime>2016-09-26T23:57:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>WEBCLIENT3</SourceNode>
+        <DestinationNode>MAILSERVER2</DestinationNode>
+        <Functionality func="SPAM"/>
+        <Functionality func="CACHE"/>
+        <Functionality func="NAT"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="false" name="Policy109">
+        <Nffg>Nffg4</Nffg>
+        <Result>
+            <VerificationResult>true</VerificationResult>
+            <VerificationResultMsg>Policy verificarion result true</VerificationResultMsg>
+            <VerificationTime>2016-09-26T20:14:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>MAILCLIENT5</SourceNode>
+        <DestinationNode>MAILSERVER6</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="false" name="Policy92">
+        <Nffg>Nffg4</Nffg>
+        <Result>
+            <VerificationResult>true</VerificationResult>
+            <VerificationResultMsg>Policy verificarion result true</VerificationResultMsg>
+            <VerificationTime>2016-09-27T06:39:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>WEBCLIENT2</SourceNode>
+        <DestinationNode>MAILSERVER5</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="true" name="Policy106">
+        <Nffg>Nffg4</Nffg>
+        <Result>
+            <VerificationResult>true</VerificationResult>
+            <VerificationResultMsg>Policy verificarion result true</VerificationResultMsg>
+            <VerificationTime>2016-09-27T00:45:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>MAILCLIENT5</SourceNode>
+        <DestinationNode>MAILSERVER8</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="true" name="Policy91">
+        <Nffg>Nffg4</Nffg>
+        <Result>
+            <VerificationResult>true</VerificationResult>
+            <VerificationResultMsg>Policy verificarion result true</VerificationResultMsg>
+            <VerificationTime>2016-09-27T00:51:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>MAILCLIENT1</SourceNode>
+        <DestinationNode>MAILSERVER9</DestinationNode>
+        <Functionality func="FW"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="true" name="Policy105">
+        <Nffg>Nffg4</Nffg>
+        <SourceNode>WEBCLIENT4</SourceNode>
+        <DestinationNode>WEBSERVER3</DestinationNode>
+        <Functionality func="CACHE"/>
+        <Functionality func="DPI"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="true" name="Policy90">
+        <Nffg>Nffg4</Nffg>
+        <SourceNode>MAILCLIENT0</SourceNode>
+        <DestinationNode>WEBSERVER3</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="true" name="Policy108">
+        <Nffg>Nffg4</Nffg>
+        <SourceNode>MAILCLIENT5</SourceNode>
+        <DestinationNode>WEBSERVER1</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="false" name="Policy107">
+        <Nffg>Nffg4</Nffg>
+        <SourceNode>MAILCLIENT5</SourceNode>
+        <DestinationNode>WEBSERVER4</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="true" name="Policy96">
+        <Nffg>Nffg4</Nffg>
+        <Result>
+            <VerificationResult>false</VerificationResult>
+            <VerificationResultMsg>Policy verification result not true</VerificationResultMsg>
+            <VerificationTime>2016-09-27T14:22:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>WEBCLIENT2</SourceNode>
+        <DestinationNode>WEBSERVER1</DestinationNode>
+        <Functionality func="VPN"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="false" name="Policy102">
+        <Nffg>Nffg4</Nffg>
+        <Result>
+            <VerificationResult>true</VerificationResult>
+            <VerificationResultMsg>Policy verificarion result true</VerificationResultMsg>
+            <VerificationTime>2016-09-27T04:59:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>WEBCLIENT4</SourceNode>
+        <DestinationNode>MAILSERVER6</DestinationNode>
+        <Functionality func="VPN"/>
+        <Functionality func="DPI"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="false" name="Policy95">
+        <Nffg>Nffg4</Nffg>
+        <Result>
+            <VerificationResult>false</VerificationResult>
+            <VerificationResultMsg>Policy verification result not true</VerificationResultMsg>
+            <VerificationTime>2016-09-27T03:15:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>WEBCLIENT2</SourceNode>
+        <DestinationNode>MAILSERVER5</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="false" name="Policy101">
+        <Nffg>Nffg4</Nffg>
+        <Result>
+            <VerificationResult>false</VerificationResult>
+            <VerificationResultMsg>Policy verification result not true</VerificationResultMsg>
+            <VerificationTime>2016-09-26T22:28:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>WEBCLIENT4</SourceNode>
+        <DestinationNode>WEBSERVER1</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="true" name="Policy94">
+        <Nffg>Nffg4</Nffg>
+        <SourceNode>WEBCLIENT2</SourceNode>
+        <DestinationNode>MAILSERVER6</DestinationNode>
+        <Functionality func="WEB_CLIENT"/>
+        <Functionality func="MAIL_CLIENT"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="true" name="Policy104">
+        <Nffg>Nffg4</Nffg>
+        <Result>
+            <VerificationResult>false</VerificationResult>
+            <VerificationResultMsg>Policy verification result not true</VerificationResultMsg>
+            <VerificationTime>2016-09-27T02:04:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>WEBCLIENT4</SourceNode>
+        <DestinationNode>WEBSERVER1</DestinationNode>
+        <Functionality func="MAIL_CLIENT"/>
+        <Functionality func="WEB_CLIENT"/>
+        <Functionality func="FW"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="true" name="Policy93">
+        <Nffg>Nffg4</Nffg>
+        <Result>
+            <VerificationResult>true</VerificationResult>
+            <VerificationResultMsg>Policy verificarion result true</VerificationResultMsg>
+            <VerificationTime>2016-09-26T21:14:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>WEBCLIENT2</SourceNode>
+        <DestinationNode>MAILSERVER6</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="true" name="Policy103">
+        <Nffg>Nffg4</Nffg>
+        <Result>
+            <VerificationResult>true</VerificationResult>
+            <VerificationResultMsg>Policy verificarion result true</VerificationResultMsg>
+            <VerificationTime>2016-09-26T22:27:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>WEBCLIENT4</SourceNode>
+        <DestinationNode>WEBSERVER4</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="false" name="Policy89">
+        <Nffg>Nffg4</Nffg>
+        <Result>
+            <VerificationResult>true</VerificationResult>
+            <VerificationResultMsg>Policy verificarion result true</VerificationResultMsg>
+            <VerificationTime>2016-09-27T08:32:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>MAILCLIENT0</SourceNode>
+        <DestinationNode>MAILSERVER0</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="false" name="Policy88">
+        <Nffg>Nffg4</Nffg>
+        <Result>
+            <VerificationResult>false</VerificationResult>
+            <VerificationResultMsg>Policy verification result not true</VerificationResultMsg>
+            <VerificationTime>2016-09-27T08:14:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>MAILCLIENT0</SourceNode>
+        <DestinationNode>MAILSERVER2</DestinationNode>
+        <Functionality func="MAIL_CLIENT"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="true" name="Policy87">
+        <Nffg>Nffg4</Nffg>
+        <Result>
+            <VerificationResult>true</VerificationResult>
+            <VerificationResultMsg>Policy verificarion result true</VerificationResultMsg>
+            <VerificationTime>2016-09-27T03:24:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>MAILCLIENT0</SourceNode>
+        <DestinationNode>MAILSERVER6</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="true" name="Policy100">
+        <Nffg>Nffg4</Nffg>
+        <SourceNode>WEBCLIENT3</SourceNode>
+        <DestinationNode>WEBSERVER1</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="true" name="Policy86">
+        <Nffg>Nffg3</Nffg>
+        <SourceNode>MAILSERVER1</SourceNode>
+        <DestinationNode>WEBCLIENT6</DestinationNode>
+        <Functionality func="VPN"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="false" name="Policy81">
+        <Nffg>Nffg3</Nffg>
+        <Result>
+            <VerificationResult>true</VerificationResult>
+            <VerificationResultMsg>Policy verificarion result true</VerificationResultMsg>
+            <VerificationTime>2016-09-27T01:24:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>MAILSERVER1</SourceNode>
+        <DestinationNode>WEBCLIENT6</DestinationNode>
+        <Functionality func="NAT"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="true" name="Policy80">
+        <Nffg>Nffg3</Nffg>
+        <Result>
+            <VerificationResult>false</VerificationResult>
+            <VerificationResultMsg>Policy verification result not true</VerificationResultMsg>
+            <VerificationTime>2016-09-27T04:33:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>MAILSERVER0</SourceNode>
+        <DestinationNode>MAILCLIENT2</DestinationNode>
+        <Functionality func="MAIL_CLIENT"/>
+        <Functionality func="WEB_SERVER"/>
+        <Functionality func="MAIL_SERVER"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="false" name="Policy85">
+        <Nffg>Nffg3</Nffg>
+        <SourceNode>MAILSERVER4</SourceNode>
+        <DestinationNode>MAILCLIENT0</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="true" name="Policy84">
+        <Nffg>Nffg3</Nffg>
+        <SourceNode>MAILSERVER1</SourceNode>
+        <DestinationNode>WEBCLIENT6</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="false" name="Policy83">
+        <Nffg>Nffg3</Nffg>
+        <SourceNode>WEBSERVER3</SourceNode>
+        <DestinationNode>MAILCLIENT4</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="true" name="Policy82">
+        <Nffg>Nffg3</Nffg>
+        <Result>
+            <VerificationResult>true</VerificationResult>
+            <VerificationResultMsg>Policy verificarion result true</VerificationResultMsg>
+            <VerificationTime>2016-09-26T14:55:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>MAILSERVER0</SourceNode>
+        <DestinationNode>MAILCLIENT4</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="true" name="Policy78">
+        <Nffg>Nffg3</Nffg>
+        <Result>
+            <VerificationResult>true</VerificationResult>
+            <VerificationResultMsg>Policy verificarion result true</VerificationResultMsg>
+            <VerificationTime>2016-09-27T08:06:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>MAILSERVER0</SourceNode>
+        <DestinationNode>MAILCLIENT2</DestinationNode>
+        <Functionality func="WEB_CLIENT"/>
+        <Functionality func="FW"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="false" name="Policy77">
+        <Nffg>Nffg3</Nffg>
+        <Result>
+            <VerificationResult>false</VerificationResult>
+            <VerificationResultMsg>Policy verification result not true</VerificationResultMsg>
+            <VerificationTime>2016-09-27T05:26:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>WEBCLIENT7</SourceNode>
+        <DestinationNode>WEBSERVER3</DestinationNode>
+        <Functionality func="VPN"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="false" name="Policy76">
+        <Nffg>Nffg3</Nffg>
+        <Result>
+            <VerificationResult>true</VerificationResult>
+            <VerificationResultMsg>Policy verificarion result true</VerificationResultMsg>
+            <VerificationTime>2016-09-26T18:44:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>WEBCLIENT7</SourceNode>
+        <DestinationNode>MAILSERVER1</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="true" name="Policy75">
+        <Nffg>Nffg3</Nffg>
+        <Result>
+            <VerificationResult>true</VerificationResult>
+            <VerificationResultMsg>Policy verificarion result true</VerificationResultMsg>
+            <VerificationTime>2016-09-26T22:46:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>WEBCLIENT6</SourceNode>
+        <DestinationNode>MAILSERVER1</DestinationNode>
+        <Functionality func="NAT"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="false" name="Policy79">
+        <Nffg>Nffg3</Nffg>
+        <SourceNode>MAILSERVER0</SourceNode>
+        <DestinationNode>MAILCLIENT2</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="true" name="Policy70">
+        <Nffg>Nffg3</Nffg>
+        <Result>
+            <VerificationResult>true</VerificationResult>
+            <VerificationResultMsg>Policy verificarion result true</VerificationResultMsg>
+            <VerificationTime>2016-09-26T17:02:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>MAILCLIENT4</SourceNode>
+        <DestinationNode>WEBSERVER3</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="false" name="Policy74">
+        <Nffg>Nffg3</Nffg>
+        <SourceNode>WEBCLIENT6</SourceNode>
+        <DestinationNode>MAILSERVER1</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="true" name="Policy73">
+        <Nffg>Nffg3</Nffg>
+        <SourceNode>WEBCLIENT6</SourceNode>
+        <DestinationNode>WEBSERVER3</DestinationNode>
+        <Functionality func="NAT"/>
+        <Functionality func="FW"/>
+        <Functionality func="CACHE"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="false" name="Policy72">
+        <Nffg>Nffg3</Nffg>
+        <SourceNode>WEBCLIENT6</SourceNode>
+        <DestinationNode>MAILSERVER1</DestinationNode>
+        <Functionality func="VPN"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="false" name="Policy71">
+        <Nffg>Nffg3</Nffg>
+        <Result>
+            <VerificationResult>false</VerificationResult>
+            <VerificationResultMsg>Policy verification result not true</VerificationResultMsg>
+            <VerificationTime>2016-09-27T01:37:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>MAILCLIENT4</SourceNode>
+        <DestinationNode>MAILSERVER2</DestinationNode>
+        <Functionality func="VPN"/>
+        <Functionality func="WEB_SERVER"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="false" name="Policy67">
+        <Nffg>Nffg3</Nffg>
+        <SourceNode>MAILCLIENT2</SourceNode>
+        <DestinationNode>MAILSERVER0</DestinationNode>
+        <Functionality func="WEB_CLIENT"/>
+        <Functionality func="FW"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="false" name="Policy66">
+        <Nffg>Nffg3</Nffg>
+        <SourceNode>MAILCLIENT2</SourceNode>
+        <DestinationNode>MAILSERVER0</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="false" name="Policy65">
+        <Nffg>Nffg3</Nffg>
+        <SourceNode>MAILCLIENT2</SourceNode>
+        <DestinationNode>WEBSERVER3</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="false" name="Policy64">
+        <Nffg>Nffg3</Nffg>
+        <SourceNode>MAILCLIENT2</SourceNode>
+        <DestinationNode>MAILSERVER0</DestinationNode>
+        <Functionality func="MAIL_CLIENT"/>
+        <Functionality func="WEB_SERVER"/>
+        <Functionality func="MAIL_SERVER"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="true" name="Policy69">
+        <Nffg>Nffg3</Nffg>
+        <SourceNode>MAILCLIENT4</SourceNode>
+        <DestinationNode>MAILSERVER0</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="true" name="Policy68">
+        <Nffg>Nffg3</Nffg>
+        <Result>
+            <VerificationResult>false</VerificationResult>
+            <VerificationResultMsg>Policy verification result not true</VerificationResultMsg>
+            <VerificationTime>2016-09-27T09:03:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>MAILCLIENT3</SourceNode>
+        <DestinationNode>MAILSERVER0</DestinationNode>
+        <Functionality func="NAT"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="true" name="Policy63">
+        <Nffg>Nffg3</Nffg>
+        <SourceNode>MAILCLIENT1</SourceNode>
+        <DestinationNode>WEBSERVER3</DestinationNode>
+        <Functionality func="FW"/>
+        <Functionality func="VPN"/>
+        <Functionality func="MAIL_SERVER"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="false" name="Policy62">
+        <Nffg>Nffg3</Nffg>
+        <SourceNode>MAILCLIENT0</SourceNode>
+        <DestinationNode>MAILSERVER4</DestinationNode>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TraversalPolicyType" positive="false" name="Policy61">
+        <Nffg>Nffg2</Nffg>
+        <Result>
+            <VerificationResult>false</VerificationResult>
+            <VerificationResultMsg>Policy verification result not true</VerificationResultMsg>
+            <VerificationTime>2016-09-26T07:25:20.000+02:00</VerificationTime>
+        </Result>
+        <SourceNode>MAILSERVER0</SourceNode>
+        <DestinationNode>WEBCLIENT0</DestinationNode>
+        <Functionality func="NAT"/>
+        <Functionality func="VPN"/>
+    </Policy>
+    <Policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ReachibilityPolicyType" positive="false" name="Policy60">
+        <Nffg>Nffg2</Nffg>
+        <SourceNode>MAILSERVER1</SourceNode>
+        <DestinationNode>WEBCLIENT0</DestinationNode>
+    </Policy>
+</Policies>

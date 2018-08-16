@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="NFFG-2" default="all" basedir=".">
+    
+    <taskdef name="wjc"  classname="org.jvnet.ws.wadl2java.WJCTask">
+        <classpath>
+            <fileset dir="${lib.dir}"/>
+        </classpath>
+    </taskdef>
+
+    <property name="package" value="it.polito.dp2.NFFG.sol2" />
+    
+    <target name="generate-artifacts">
+        <wjc description="${WADL}" package="${package}"
+                     autoSchemaPackage="false" target="${gen.dir}">
+        </wjc>
+    </target>
+</project>

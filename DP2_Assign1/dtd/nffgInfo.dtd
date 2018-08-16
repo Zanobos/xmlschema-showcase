@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- author a.zanotti -->
+
+<!ELEMENT NffgVerifier ((Nffg*), (Policy*))>
+
+<!ELEMENT Nffg (UpdateTime, (Node*), (Link*))>
+<!ATTLIST Nffg
+                name ID #REQUIRED
+>
+
+<!ELEMENT UpdateTime (#PCDATA)>
+
+<!ELEMENT Node (Functionality)>
+<!ATTLIST Node
+                name ID #REQUIRED
+                links IDREFS #IMPLIED
+>
+
+<!ELEMENT Functionality EMPTY>
+<!ATTLIST Functionality
+                        func (CACHE|DPI|FW|MAIL_CLIENT|MAIL_SERVER|NAT|SPAM|VPN|WEB_CLIENT|WEB_SERVER) #REQUIRED
+>
+
+<!ELEMENT Link EMPTY>
+<!ATTLIST Link
+                name ID #REQUIRED
+                sourceNode IDREF #REQUIRED
+                destNode IDREF #REQUIRED
+>
+
+<!ELEMENT Policy (VerificationResult, (Functionality*))>
+<!ATTLIST Policy
+                name ID #REQUIRED
+                sourceNode IDREF #REQUIRED
+                destNode IDREF #REQUIRED
+                positive (true|false) #REQUIRED
+>
+
+<!ELEMENT VerificationResult (Result, Message, VerificationTime)>
+<!ELEMENT Result EMPTY>
+<!ATTLIST Result
+                res (true|false) #REQUIRED
+>
+
+<!ELEMENT Message (#PCDATA)>
+<!ELEMENT VerificationTime (#PCDATA)>

@@ -1,0 +1,15 @@
+REQUEST
+
+DELETE http://localhost:9008/NffgService/rest/nffgVerifier/nffgs
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ReferenceByID>
+	<ReferenceID>Nffg6</ReferenceID>
+</ReferenceByID>
+
+RESPONSE Status 200 OK
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ReferenceByID>
+    <ReferenceID>Nffg6</ReferenceID>
+</ReferenceByID>

@@ -1,0 +1,195 @@
+REQUEST
+
+GET http://localhost:9008/NffgService/rest/nffgVerifier/nffgs/Nffg3
+
+RESPONSE Status 200 OK
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Nffg name="Nffg3">
+    <UpdateTime>2016-09-27T09:31:20.000+02:00</UpdateTime>
+    <Node name="MAILSERVER4">
+        <Functionality func="MAIL_SERVER"/>
+        <Link>Link26</Link>
+    </Node>
+    <Node name="MAILSERVER2">
+        <Functionality func="MAIL_SERVER"/>
+        <Link>Link22</Link>
+    </Node>
+    <Node name="MAILCLIENT1">
+        <Functionality func="MAIL_CLIENT"/>
+        <Link>Link2</Link>
+    </Node>
+    <Node name="MAILSERVER1">
+        <Functionality func="MAIL_SERVER"/>
+        <Link>Link20</Link>
+    </Node>
+    <Node name="MAILCLIENT0">
+        <Functionality func="MAIL_CLIENT"/>
+        <Link>Link0</Link>
+    </Node>
+    <Node name="MAILSERVER0">
+        <Functionality func="MAIL_SERVER"/>
+        <Link>Link18</Link>
+    </Node>
+    <Node name="MAILCLIENT4">
+        <Functionality func="MAIL_CLIENT"/>
+        <Link>Link8</Link>
+    </Node>
+    <Node name="MAILCLIENT3">
+        <Functionality func="MAIL_CLIENT"/>
+        <Link>Link6</Link>
+    </Node>
+    <Node name="MAILCLIENT2">
+        <Functionality func="MAIL_CLIENT"/>
+        <Link>Link4</Link>
+    </Node>
+    <Node name="WEBCLIENT7">
+        <Functionality func="WEB_CLIENT"/>
+        <Link>Link14</Link>
+    </Node>
+    <Node name="VPN0">
+        <Functionality func="VPN"/>
+        <Link>Link19</Link>
+        <Link>Link17</Link>
+        <Link>Link23</Link>
+        <Link>Link11</Link>
+        <Link>Link21</Link>
+        <Link>Link27</Link>
+        <Link>Link15</Link>
+        <Link>Link25</Link>
+        <Link>Link1</Link>
+        <Link>Link13</Link>
+        <Link>Link3</Link>
+        <Link>Link5</Link>
+        <Link>Link7</Link>
+        <Link>Link9</Link>
+    </Node>
+    <Node name="WEBCLIENT8">
+        <Functionality func="WEB_CLIENT"/>
+        <Link>Link16</Link>
+    </Node>
+    <Node name="WEBSERVER3">
+        <Functionality func="WEB_SERVER"/>
+        <Link>Link24</Link>
+    </Node>
+    <Node name="WEBCLIENT5">
+        <Functionality func="WEB_CLIENT"/>
+        <Link>Link10</Link>
+    </Node>
+    <Node name="WEBCLIENT6">
+        <Functionality func="WEB_CLIENT"/>
+        <Link>Link12</Link>
+    </Node>
+    <Link name="Link12">
+        <SourceNode>WEBCLIENT6</SourceNode>
+        <DestinationNode>VPN0</DestinationNode>
+    </Link>
+    <Link name="Link11">
+        <SourceNode>VPN0</SourceNode>
+        <DestinationNode>WEBCLIENT5</DestinationNode>
+    </Link>
+    <Link name="Link10">
+        <SourceNode>WEBCLIENT5</SourceNode>
+        <DestinationNode>VPN0</DestinationNode>
+    </Link>
+    <Link name="Link16">
+        <SourceNode>WEBCLIENT8</SourceNode>
+        <DestinationNode>VPN0</DestinationNode>
+    </Link>
+    <Link name="Link15">
+        <SourceNode>VPN0</SourceNode>
+        <DestinationNode>WEBCLIENT7</DestinationNode>
+    </Link>
+    <Link name="Link14">
+        <SourceNode>WEBCLIENT7</SourceNode>
+        <DestinationNode>VPN0</DestinationNode>
+    </Link>
+    <Link name="Link13">
+        <SourceNode>VPN0</SourceNode>
+        <DestinationNode>WEBCLIENT6</DestinationNode>
+    </Link>
+    <Link name="Link19">
+        <SourceNode>VPN0</SourceNode>
+        <DestinationNode>MAILSERVER0</DestinationNode>
+    </Link>
+    <Link name="Link18">
+        <SourceNode>MAILSERVER0</SourceNode>
+        <DestinationNode>VPN0</DestinationNode>
+    </Link>
+    <Link name="Link17">
+        <SourceNode>VPN0</SourceNode>
+        <DestinationNode>WEBCLIENT8</DestinationNode>
+    </Link>
+    <Link name="Link23">
+        <SourceNode>VPN0</SourceNode>
+        <DestinationNode>MAILSERVER2</DestinationNode>
+    </Link>
+    <Link name="Link22">
+        <SourceNode>MAILSERVER2</SourceNode>
+        <DestinationNode>VPN0</DestinationNode>
+    </Link>
+    <Link name="Link21">
+        <SourceNode>VPN0</SourceNode>
+        <DestinationNode>MAILSERVER1</DestinationNode>
+    </Link>
+    <Link name="Link20">
+        <SourceNode>MAILSERVER1</SourceNode>
+        <DestinationNode>VPN0</DestinationNode>
+    </Link>
+    <Link name="Link27">
+        <SourceNode>VPN0</SourceNode>
+        <DestinationNode>MAILSERVER4</DestinationNode>
+    </Link>
+    <Link name="Link26">
+        <SourceNode>MAILSERVER4</SourceNode>
+        <DestinationNode>VPN0</DestinationNode>
+    </Link>
+    <Link name="Link0">
+        <SourceNode>MAILCLIENT0</SourceNode>
+        <DestinationNode>VPN0</DestinationNode>
+    </Link>
+    <Link name="Link25">
+        <SourceNode>VPN0</SourceNode>
+        <DestinationNode>WEBSERVER3</DestinationNode>
+    </Link>
+    <Link name="Link1">
+        <SourceNode>VPN0</SourceNode>
+        <DestinationNode>MAILCLIENT0</DestinationNode>
+    </Link>
+    <Link name="Link24">
+        <SourceNode>WEBSERVER3</SourceNode>
+        <DestinationNode>VPN0</DestinationNode>
+    </Link>
+    <Link name="Link2">
+        <SourceNode>MAILCLIENT1</SourceNode>
+        <DestinationNode>VPN0</DestinationNode>
+    </Link>
+    <Link name="Link3">
+        <SourceNode>VPN0</SourceNode>
+        <DestinationNode>MAILCLIENT1</DestinationNode>
+    </Link>
+    <Link name="Link4">
+        <SourceNode>MAILCLIENT2</SourceNode>
+        <DestinationNode>VPN0</DestinationNode>
+    </Link>
+    <Link name="Link5">
+        <SourceNode>VPN0</SourceNode>
+        <DestinationNode>MAILCLIENT2</DestinationNode>
+    </Link>
+    <Link name="Link6">
+        <SourceNode>MAILCLIENT3</SourceNode>
+        <DestinationNode>VPN0</DestinationNode>
+    </Link>
+    <Link name="Link7">
+        <SourceNode>VPN0</SourceNode>
+        <DestinationNode>MAILCLIENT3</DestinationNode>
+    </Link>
+    <Link name="Link8">
+        <SourceNode>MAILCLIENT4</SourceNode>
+        <DestinationNode>VPN0</DestinationNode>
+    </Link>
+    <Link name="Link9">
+        <SourceNode>VPN0</SourceNode>
+        <DestinationNode>MAILCLIENT4</DestinationNode>
+    </Link>
+</Nffg>

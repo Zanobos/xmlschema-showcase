@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="NFFG-3" default="all" basedir=".">
+    
+	<!-- The location for generated files -->
+	<property name="schema.dir" location="${lab3.location}/xsd" />
+	<property name="package" value="it.polito.dp2.NFFG.sol3.service" />
+	<property name="binding.file" value="${schema.dir}/binding.xjb" />
+	
+	
+	<!-- The classpath to be used for compilation of the solution -->
+	<path id="sol.classpath">
+		 <fileset dir="${lib.dir}"/>
+	</path>
+	
+	
+	<!-- build the service -->
+	<target name="build-service" depends="generate-bindings, generate-neo4j-artifacts">
+		<echo>Building the service</echo>
+		<javac 
+			destdir="${build.dir}"
+			debug="${debug}"
+			debuglevel="${debuglevel}"
+			source="${source}"
+			target="${target}"
+			includeantruntime="false">
+				<src path="${src.dir}" />
+				<classpath>
+					<path refid="sol.classpath" />
+				</classpath>
+		</javac>
+		<echo>Done.</echo>
+	</target>
+	
+	<taskdef name="wjc"  classname="org.jvnet.ws.wadl2java.WJCTask">
+        <classpath>
+            <path refid="sol.classpath" />
+        </classpath>
+    </taskdef>
+   
+	<target name="generate-bindings">
+		<exec executable="xjc" failonerror="true" >
+			<arg value="-d" />
+			<arg value="${src.dir}" />
+			<arg value="-p" />
+			<arg value="${package}.entities" />
+			<arg value="${schema.dir}/nffgVerifier.xsd" />
+		</exec>
+	</target>
+	
+   <!-- generate the bindings to neo4j -->
+    <target name="generate-neo4j-artifacts">
+        <wjc description="${NEO4JURL}/application.wadl" package="${package}.neo4j"
+                     autoSchemaPackage="false" target="${src.dir}">
+        </wjc>
+    </target>
+	
+
+	
+</project>

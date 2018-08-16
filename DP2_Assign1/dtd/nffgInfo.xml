@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!--
+ author a.zanotti
+-->
+
+<!DOCTYPE NffgVerifier SYSTEM "nffgInfo.dtd">
+<NffgVerifier>
+    <Nffg name="NFFG0">
+        <UpdateTime>2016-09-27T12:54:20.000+02:00</UpdateTime>
+        <Node name="WEBSERVER0" links="Link0">
+            <Functionality func="WEB_SERVER"/>
+        </Node>
+        <Node name="WEBCLIENT0" links="Link1">
+            <Functionality func="WEB_CLIENT"/>
+        </Node>
+        <Node name="NAT0" links="Link0 Link1">
+            <Functionality func="NAT"/>
+        </Node>
+        <Link name="Link0" sourceNode="WEBSERVER0" destNode="NAT0"/>
+        <Link name="Link1" sourceNode="NAT0" destNode="WEBCLIENT0"/>
+    </Nffg>
+    <Policy name="policy0" sourceNode="WEBSERVER0" destNode="WEBCLIENT0" positive="true">
+        <VerificationResult>
+            <Result res="true"/>
+            <Message>Policy verification result true</Message>
+            <VerificationTime>2016-09-26T03:19:20.000+02:00</VerificationTime>
+        </VerificationResult>
+    </Policy>
+</NffgVerifier>

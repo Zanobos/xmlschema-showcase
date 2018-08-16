@@ -1,0 +1,45 @@
+REQUEST
+
+POST http://localhost:9008/NffgService/rest/nffgVerifier/verifyNewPolicies
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Policies xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Policy xsi:type="ReachibilityPolicyType" positive="true" name="ZanoPolicy1">
+		<Nffg>Nffg3</Nffg>
+		<SourceNode>MAILSERVER1</SourceNode>
+		<DestinationNode>MAILCLIENT6</DestinationNode>
+	</Policy>
+	<Policy xsi:type="ReachibilityPolicyType" positive="false" name="ZanoPolicy2">
+		<Nffg>Nffg3</Nffg>
+		<SourceNode>WEBSERVER2</SourceNode>
+		<DestinationNode>MAILCLIENT2</DestinationNode>
+	</Policy>
+	<Policy xsi:type="TraversalPolicyType" positive="true" name="ZanoPolicy3">
+		<Nffg>Nffg3</Nffg>
+		<SourceNode>MAILSERVER1</SourceNode>
+		<DestinationNode>MAILCLIENT6</DestinationNode>
+		<Functionality func="VPN"/>
+		<Functionality func="WEB_CLIENT"/>
+	</Policy>
+</Policies>
+
+RESPONSE Status 200 OK
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<VerificationResults>
+    <VerificationResult policy="ZanoPolicy1">
+        <VerificationResult>true</VerificationResult>
+        <VerificationResultMsg>Policy verification result true</VerificationResultMsg>
+        <VerificationTime>2017-01-14T11:57:01.879+01:00</VerificationTime>
+    </VerificationResult>
+    <VerificationResult policy="ZanoPolicy2">
+        <VerificationResult>false</VerificationResult>
+        <VerificationResultMsg>Policy verification result false</VerificationResultMsg>
+        <VerificationTime>2017-01-14T11:57:01.899+01:00</VerificationTime>
+    </VerificationResult>
+    <VerificationResult policy="ZanoPolicy3">
+        <VerificationResult>false</VerificationResult>
+        <VerificationResultMsg>Policy verification result false</VerificationResultMsg>
+        <VerificationTime>2017-01-14T11:57:02.073+01:00</VerificationTime>
+    </VerificationResult>
+</VerificationResults>

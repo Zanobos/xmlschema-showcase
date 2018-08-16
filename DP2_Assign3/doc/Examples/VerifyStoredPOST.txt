@@ -1,0 +1,25 @@
+REQUEST
+
+POST http://localhost:9008/NffgService/rest/nffgVerifier/verifyStoredPolicies
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ReferenceByID>
+    <ReferenceID>Policy135</ReferenceID>
+    <ReferenceID>Policy130</ReferenceID>
+</ReferenceByID>
+
+RESPONSE Status 200 OK
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<VerificationResults>
+    <VerificationResult policy="Policy135">
+        <VerificationResult>false</VerificationResult>
+        <VerificationResultMsg>Policy verification result false</VerificationResultMsg>
+        <VerificationTime>2017-01-14T11:56:16.757+01:00</VerificationTime>
+    </VerificationResult>
+    <VerificationResult policy="Policy130">
+        <VerificationResult>true</VerificationResult>
+        <VerificationResultMsg>Policy verification result true</VerificationResultMsg>
+        <VerificationTime>2017-01-14T11:56:16.848+01:00</VerificationTime>
+    </VerificationResult>
+</VerificationResults>
